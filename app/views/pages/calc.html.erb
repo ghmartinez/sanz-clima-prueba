@@ -1,2 +1,15 @@
 <h1>Calculations</h1>
 <p>This is the page where the user can introduce the numbers for doing the sum.</p>
+
+<%= form_tag("/calc", method: "post") do %>
+  <%= label_tag(:num1, "First number:") %>
+  <%= text_field_tag(:num1) %>
+  <%= label_tag(:num2, "Second number:") %>
+  <%= text_field_tag(:num2) %>
+  <%= submit_tag("Calculate") %>
+  <% raise %>
+<% end %>
+
+<% if @sum %>
+  <p>The sum of <%= @num1 %> and <%= @num2 %> is <%= @sum %>.</p>
+<% end %>

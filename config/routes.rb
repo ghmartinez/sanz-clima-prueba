@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root to: 'pages#home'
   get '/calc', to: 'pages#calc'
+  post '/calc', to: 'pages#sum'
   get '/history', to: 'pages#history'
 end
