@@ -1,7 +1,10 @@
 class PagesController < ApplicationController
+  def calc
+  end
 
-  # Necesito coger cada número del usuario, guardarlo en una variable temporal, meterlo en un array y sumarlos todos.
-  def sum
-    @sum = params[:num1].to_i + params[:num2].to_i
+  def history
+    number1 = params[:numbers][:number1]
+    number2 = params[:numbers][:number2]
+    @result = number1.to_i + number2.to_i
   end
 end

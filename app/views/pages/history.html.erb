@@ -1,2 +1,8 @@
 <h1>Sum History</h1>
-<p>This is where the user can see all his previous calculations.</p>
+<p>This is the page where the user can see all his previous calculations.</p>
+
+<% if @result.present? %>
+  <p>The sum is <%= @result %>.</p>
+<% else %>
+  <p>No calculations have been performed yet.</p>
+<% end %>
