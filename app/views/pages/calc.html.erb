@@ -1,9 +1,16 @@
-<h1>Calculations</h1>
-<p>This is the page where the user can introduce the numbers for performing the sum.</p>
+<div class="container mt-5">
+
+<h1>Cálculo</h1>
+<p>Desde aquí introduce los números que quieres sumar:</p>
 
 <%= simple_form_for :numbers, url: history_path, method: :get do |f| %>
-  <%= f.input :number1, label: 'Number:' %>
-  <%= f.input :number2, label: 'Number:' %>
+  <%= f.input :number1, label: 'Número:' %>
+  <%= f.input :number2, label: 'Número:' %>
 
-  <%= f.button :submit, 'Calculate' %>
+  <div data-controller="calculator" id="input">
+    <button type="button" data-action="click->calculator#addInput">+</button>
+  </div>
+    <%= f.button :submit, 'Calcula' %>
 <% end %>
+
+</div>

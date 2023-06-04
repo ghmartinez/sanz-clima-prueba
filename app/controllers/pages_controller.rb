@@ -3,12 +3,10 @@ class PagesController < ApplicationController
   end
 
   def history
-    if params.has_key?(:numbers)
-    number1 = params[:numbers][:number1]
-    number2 = params[:numbers][:number2]
-    @result = number1.to_i + number2.to_i
+    if params.key?(:numbers)
+      @result = params[:numbers].values.map(&:to_i).sum.to_f
     else
-      @result = "yet to be done"
+      @result = 'ninguno de momento'
     end
   end
 end

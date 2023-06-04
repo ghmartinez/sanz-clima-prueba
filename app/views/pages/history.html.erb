@@ -1,8 +1,10 @@
-<h1>Sum History</h1>
-<p>This is the page where the user can see all his previous calculations.</p>
+<div class="container mt-5">
+
+<h1>Histórico de las sumas</h1>
+<p>Aquí es donde puedes ver todas las sumas que has realizado:</p>
 
 <% if @result.present? %>
-  <p>The sum is <%= @result %>.</p>
-<% else %>
-  <p>No calculations have been performed yet.</p>
+  <p> El resultado es <%= @result %>.</p>
 <% end %>
+
+</div>
