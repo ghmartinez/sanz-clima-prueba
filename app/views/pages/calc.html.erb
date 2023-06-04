@@ -8,9 +8,11 @@
   <%= f.input :number2, label: 'Número:' %>
 
   <div data-controller="calculator" id="input">
-    <button type="button" data-action="click->calculator#addInput">+</button>
+    <button class="btn btn-success" type="button" data-action="click->calculator#addInput">+</button>
   </div>
-    <%= f.button :submit, 'Calcula' %>
+
+  <br>
+  <%= f.button :submit, 'Calcula', class: "btn btn-primary" %>
 <% end %>
 
 </div>

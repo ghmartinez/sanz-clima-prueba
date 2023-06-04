@@ -7,4 +7,11 @@
   <p> El resultado es <%= @result %>.</p>
 <% end %>
 
-</div>
+<% if @previous_results %>
+<h2>Mis resultados anteriores:</h2>
+<% @previous_results.each do |result| %>
+  <p> El resultado ha sido <%= result %>.</p>
+<% end %>
+<% end %>
+
+<%= link_to "Calcular", calc_path, class: "btn btn-primary" %>
