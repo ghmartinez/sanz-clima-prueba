@@ -4,7 +4,7 @@
 <p>Desde aquí introduce los números que quieres sumar:</p>
 
 <%= simple_form_for :numbers, url: history_path, method: :get do |f| %>
-  <%= f.input :number1, label: 'Número:' %>
+  <%= f.input :number1, label: 'Número:', hint: "Para decimales use un punto (.) en vez de una coma (,)" %>
   <%= f.input :number2, label: 'Número:' %>
 
   <div data-controller="calculator" id="input">
@@ -12,7 +12,11 @@
   </div>
 
   <br>
-  <%= f.button :submit, 'Calcula', class: "btn btn-primary" %>
+  <%= f.button :submit, 'Suma!', class: "btn btn-primary" %>
 <% end %>
+
+<br>
+<%= link_to "Página de inicio", root_path, class: "btn btn-danger" %>
+
 
 </div>

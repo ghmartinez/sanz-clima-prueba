@@ -3,7 +3,7 @@ class PagesController < ApplicationController
     session[:previous_results] ||= []
 
     if params.key?(:numbers)
-      @result = params[:numbers].values.map(&:to_i).sum.to_f
+      @result = params[:numbers].values.map(&:to_f).sum
       session[:previous_results] << @result
     else
       @result = 'ninguno de momento'
